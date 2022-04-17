@@ -8,13 +8,12 @@
 import Foundation
 import Combine
 
-enum FeedLoadResult {
-    case succes([FeedItem])
-    case error(Error)
+public enum LoadFeedResult {
+    case success([FeedItem])
+    case failure(Error)
 }
 
-protocol FeedLoader {
-    func load(completion: @escaping (FeedLoadResult) -> Void)
-    func loadPublisher() -> AnyPublisher<[FeedItem], Error>
+public protocol FeedLoader {
+    func load(completion: @escaping (LoadFeedResult) -> Void)
 }
 
