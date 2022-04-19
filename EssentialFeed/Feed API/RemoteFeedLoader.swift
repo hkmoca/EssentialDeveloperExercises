@@ -11,7 +11,6 @@ public final class RemoteFeedLoader: FeedLoader {
     private let url: URL
     private let client: HTTPClient
     
-    
     public enum Error: Swift.Error {
         case connectivity
         case invalidData
