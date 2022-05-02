@@ -28,3 +28,4 @@ extension Array where Element == FeedImage {
         }
     }
 }
+
