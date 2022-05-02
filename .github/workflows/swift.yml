@@ -10,7 +10,7 @@ jobs:
   build:
 
     runs-on: macos-latest
-
+    script: xcodebuild clean build test -project EssentialFeed.xcodeproj -scheme "CI" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
     steps:
     - uses: actions/checkout@v3
     - name: Build
@@ -18,4 +18,3 @@ jobs:
     - name: Run tests
       run: swift test -v
 
-script: xcodebuild clean build test -project EssentialFeed/EssentialFeed.xcodepr -scheme "CI" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
