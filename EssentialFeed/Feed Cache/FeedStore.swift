@@ -12,18 +12,18 @@ public protocol FeedStore {
     typealias InsertionCompletion = (Error?) -> Void
     
     func deleteCachedFeed(completion: @escaping DeletionCompletion)
-    func insert(_ items: [LocalFeedItem], timestamp: Date, completion: @escaping InsertionCompletion)
+    func insert(_ items: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion)
 }
 
 
-extension Array where Element == FeedItem {
-    func toLocal() -> [LocalFeedItem] {
+extension Array where Element == FeedImage {
+    func toLocal() -> [LocalFeedImage] {
         return map {
-            LocalFeedItem(
+            LocalFeedImage(
                 id: $0.id,
                 description: $0.description,
                 location: $0.location,
-                imageURL: $0.imageURL
+                url: $0.imageURL
             )
         }
     }
