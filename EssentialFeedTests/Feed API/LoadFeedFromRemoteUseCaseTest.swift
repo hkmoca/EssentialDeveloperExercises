@@ -167,7 +167,7 @@ class LoadFeedFromRemoteUseCaseTest: XCTestCase {
             id: id,
             description: description,
             location: location,
-            imageURL: imageURL
+            url: imageURL
         )
         
         let json = [
