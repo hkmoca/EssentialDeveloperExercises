@@ -58,3 +58,4 @@ private extension Array where Element == RemoteFeedImage {
         }
     }
 }
+
